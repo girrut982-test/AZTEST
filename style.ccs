@@ -6,33 +6,35 @@
 }
 
 body {
-  background: #0b0b0b;
+  background-color: #0b0b0b;
   color: #ffffff;
+  line-height: 1.5;
 }
 
-/* BANNER */
+/* ===== BANNER ===== */
 .banner {
   width: 100%;
-  background: #000;
+  background-color: #000;
+  overflow: hidden;
 }
 
 .banner img {
   width: 100%;
+  height: auto;
   max-height: 420px;
-  object-fit: cover;
   display: block;
 }
 
-/* MAIN CONTENT */
+/* ===== MAIN CONTENT ===== */
 .container {
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin-bottom: 10px;
 }
 
@@ -41,69 +43,86 @@ h1 {
   margin-bottom: 40px;
 }
 
+/* ===== APP GRID ===== */
 .apps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
 }
 
+/* ===== APP CARD ===== */
 .app-card {
-  background: #111;
+  background-color: #111;
   border-radius: 15px;
   padding: 25px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .app-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
 .app-card img {
   width: 120px;
+  max-width: 100%;
   margin-bottom: 15px;
 }
 
 .app-card h2 {
   margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 
+/* ===== BUTTONS ===== */
 .btn {
   display: inline-block;
   padding: 12px 22px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: opacity 0.3s;
+  transition: opacity 0.25s ease;
 }
 
 .btn:hover {
   opacity: 0.85;
 }
 
-/* BUTTON COLORS */
+/* Button Colors */
 .gold {
-  background: gold;
+  background-color: gold;
   color: #000;
 }
 
 .red {
-  background: #e50914;
-  color: #fff;
+  background-color: #e50914;
+  color: #ffffff;
 }
 
 .blue {
-  background: #00bfff;
-  color: #fff;
+  background-color: #00bfff;
+  color: #ffffff;
 }
 
 .orange {
-  background: orange;
+  background-color: orange;
   color: #000;
 }
 
+/* ===== FOOTER ===== */
 .footer {
   margin-top: 40px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #aaaaaa;
+}
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner img {
+    max-height: 260px;
+  }
 }
