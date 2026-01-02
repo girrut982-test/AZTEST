@@ -9,7 +9,6 @@ body {
     background: linear-gradient(180deg, #050505, #0b0b0b);
     color: #fff;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
 /* Header */
@@ -29,7 +28,6 @@ body {
 .top p {
     margin-top: 0.5rem;
     color: #aaa;
-    font-size: 1rem;
 }
 
 /* Brand grid */
@@ -48,25 +46,22 @@ body {
     padding: 2rem;
     text-align: center;
     border: 1px solid rgba(255, 215, 0, 0.08);
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
-    transition: all 0.35s ease;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .brand-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
-    border-color: rgba(255, 215, 0, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.2);
 }
 
 .brand-card img {
     max-width: 150px;
-    margin-bottom: 1.2rem;
-    filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+    margin-bottom: 1rem;
 }
 
 .brand-card span {
     display: block;
-    margin-top: 0.5rem;
     font-size: 1.1rem;
     letter-spacing: 1px;
 }
@@ -77,31 +72,4 @@ footer {
     padding: 1.5rem;
     color: #666;
     font-size: 0.9rem;
-}
-
-/* ❄ Premium Snow Effect */
-.snow::before,
-.snow::after {
-    content: "";
-    position: fixed;
-    inset: -200%;
-    background-image:
-        radial-gradient(1px 1px at 20px 30px, #fff, transparent),
-        radial-gradient(2px 2px at 80px 120px, #fff, transparent),
-        radial-gradient(1px 1px at 160px 60px, #fff, transparent),
-        radial-gradient(2px 2px at 200px 200px, #fff, transparent);
-    background-size: 250px 250px;
-    animation: snowfall 20s linear infinite;
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-.snow::after {
-    animation-duration: 35s;
-    opacity: 0.3;
-}
-
-@keyframes snowfall {
-    from { transform: translateY(0); }
-    to { transform: translateY(50%); }
 }
