@@ -7,7 +7,7 @@
 
 body {
     background: linear-gradient(180deg, #050505, #0b0b0b);
-    color: #fff;
+    color: #ffffff;
     min-height: 100vh;
 }
 
@@ -27,7 +27,8 @@ body {
 
 .top p {
     margin-top: 0.5rem;
-    color: #aaa;
+    color: #aaaaaa;
+    font-size: 1rem;
 }
 
 /* Brand grid */
@@ -55,8 +56,11 @@ body {
     box-shadow: 0 0 35px rgba(255, 215, 0, 0.2);
 }
 
+/* LOGO SIZE FIX */
 .brand-card img {
-    max-width: 150px;
+    width: 140px;
+    height: 80px;
+    object-fit: contain;
     margin-bottom: 1rem;
 }
 
@@ -64,12 +68,13 @@ body {
     display: block;
     font-size: 1.1rem;
     letter-spacing: 1px;
+    color: #ffffff;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1.5rem;
-    color: #666;
+    color: #666666;
     font-size: 0.9rem;
 }
